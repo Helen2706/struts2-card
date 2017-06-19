@@ -35,6 +35,7 @@ public class JdbcPoolUtils {
 				for(int i=0;i<params.length;i++)
 					preparedStatement.setObject(i+1, params[i]);
 			}
+			System.out.println(sql);
 			row = preparedStatement.executeUpdate();
 			JdbcPoolUtils.close(null, preparedStatement, connection);
 		} catch (SQLException e) {
@@ -55,6 +56,7 @@ public class JdbcPoolUtils {
 				for(int i=0;i<params.length;i++)
 					preparedStatement.setObject(i+1, params[i]);
 			}
+			System.out.println(sql);
 			resultSet = preparedStatement.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();

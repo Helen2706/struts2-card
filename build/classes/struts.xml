@@ -13,7 +13,7 @@
     	<action name="register" class="com.edu.action.user.UserAction" method="userRegister">
     		<result name="success">/user/register_success.jsp</result>
     		<result name="error">/user/register.jsp</result>
-    		<!-- <result name="input">/user/register.jsp</result> -->
+    		<result name="input">/user/register.jsp</result>
     	</action>
     	
     	<action name="login" class="com.edu.action.user.UserAction" method="userLogin">

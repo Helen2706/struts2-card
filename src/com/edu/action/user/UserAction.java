@@ -13,7 +13,7 @@ public class UserAction extends ActionSupport {
 	public String userLogin() throws Exception{
 		String forward=null;
 		User user2 = userDao.find(user);
-		if(user!=null){
+		if(user2!=null){
 			forward = "success";
 		}
 		else{			
@@ -41,6 +41,32 @@ public class UserAction extends ActionSupport {
 			}
 		return forward;
 		
+		
+		
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public String getRe_password() {
+		return re_password;
+	}
+
+	public void setRe_password(String re_password) {
+		this.re_password = re_password;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }
